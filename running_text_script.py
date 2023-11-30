@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+from save_requests import save_request
 
 def create_video(video_file, text, width=100, height=100, duration_sec=3, fps=30):
     
@@ -27,4 +28,5 @@ def create_video(video_file, text, width=100, height=100, duration_sec=3, fps=30
 
 
 phrase = input('Input phrase:')
+save_request(phrase)
 create_video('running_text.mp4', phrase)
